@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌠Custom Timer🌠</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="bg-darkener">
+    </div>
+    <center id="content">
+        <!--title-->
+        <h1 id="title">🌠Custom Timer🌠</h1>
+        <main id="menu-aligner">
+            <!--time starter-->
+            <section>
+                <p class="text">start at:</p>
+                <div>
+                    <div class="aligner">
+                        <input id="hour" class="text input-types" type="text" placeholder="0" onchange="changeinfo()"><p class="text" id="hourtext">hr</p>
+                    </div>
+                    <div class="aligner">
+                        <input id="minute" class="text input-types" type="text" placeholder="0" onchange="changeinfo()"><p class="text" id="mintext">min</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--selectors-->
+            <section id="menu-aligner2">
+
+
+                <!--first selector-->
+                <select id="selector" class="text">
+                    <option class="option" value="SW" onclick="changetype()">stopwatch</option>
+                    <option class="option" value="CD" onclick="changetype()">countdown</option>
+                </select>
+
+
+                <!--second selector-->
+                <select id="formatter" class="text">
+                    <option class="option" value="hr:min:s" onclick="changeinfo()">hr:min:s</option>
+                    <option class="option" value="min:s.ms" onclick="changeinfo()">min:s.ms</option>
+                </select>
+
+
+            </section>
+        </main>
+
+        <main class="text" style="display: flex; justify-content: center; margin:0px 0px calc(var(--spacer)*6) 0px">
+            <input id="glower" type="checkbox"><p style="margin:0px 0px 0px 20px">glowing text (affects performance)</p>
+        </main>
+
+        <!--set timer button-->
+        <div style="display: flex; justify-content: center;">
+            <button onclick="SubmitTimer()">start timer</button>
+        </div>
+    </center>
+
+
+    <center id="clock">
+        
+        <h1 id="clocktext"></h1>
+        <section id="formatter2">
+            <h1 id="format1">hr</h1>
+            <h1 id="format2">min</h1>
+            <h1 id="format3">sec</h1>
+        </section>
+        <button class="set text" onclick="location=location">Back to menu</button>
+    </center>
+
+    <footer id="credits">Made by Adrian Magdici</footer>
+    <script src="src/index.js"></script>
+</body>
+</html>
