@@ -23,7 +23,7 @@
 }
 
 body {
-    background-image: url(/img/pattern.webp);
+    background-image: url(img/pattern.webp);
     background-repeat: repeat;
     background-size: 20px;
     animation: slideBackground 10s linear infinite;
